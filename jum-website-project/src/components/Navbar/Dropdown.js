@@ -3,13 +3,13 @@ import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 import "./dropdown.scss";
 
-const Dropdown = ({ onCloseMobileMenu }) => {
+const Dropdown = ({ CloseMobileMenu }) => {
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  // const handleClick = () => setClick(!click);
 
   return (
     <ul
-      onClick={onCloseMobileMenu}
+      onClick={CloseMobileMenu}
       className={click ? "dropdown-menu clicked" : "dropdown-menu"}
     >
       {MenuItems.map((item, index) => {

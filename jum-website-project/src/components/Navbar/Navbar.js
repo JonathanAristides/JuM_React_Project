@@ -53,19 +53,20 @@ const Navbar = () => {
           onMouseLeave={onMouseLeave}
           onMouseEnter={onMouseEnter}
         >
-          <Link to="/services" className="nav-links">
-            Services <i className="fas fa-caret-down" />
+          <Link to="#" className="nav-links">
+            Dienste
           </Link>
-          {dropdown && <Dropdown onCloseMobileMenu={closeMobileMenu} />}
+          {dropdown && <Dropdown CloseMobileMenu={closeMobileMenu} />}
         </li>
         <li className="nav-item">
-          <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
-            Contact
+          <Link to="/kontakt" className="nav-links" onClick={closeMobileMenu}>
+            Kontakt
           </Link>
         </li>
+
         <li className="nav-item">
-          <Link to="/team" className="nav-links" onClick={closeMobileMenu}>
-            Team
+          <Link to="/üeberuns" className="nav-links" onClick={closeMobileMenu}>
+            Über uns
           </Link>
         </li>
       </ul>

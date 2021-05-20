@@ -1,6 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.scss";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
       <Router>
         <Navbar />
 
-        <main></main>
+        <main className="main"></main>
 
-        <footer></footer>
+        <Footer />
       </Router>
     </div>
   );
