@@ -1,0 +1,51 @@
+//Mobile Styles
+@media screen and (max-width: 960px) {
+  .homepageContainer {
+    display: grid;
+    place-content: center;
+    padding: 2rem 0;
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto);
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 600px;
+
+    .homeslider {
+      background-color: lightcyan;
+      border: solid 1px;
+    }
+  }
+
+  .firmNameMain {
+    color: var(--darkGreyColor);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  .slogan {
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  .slogan::after {
+    content: url("../../../assets/svg/underlines/line1.svg");
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -1.1rem;
+  }
+
+  .button {
+    display: grid;
+    place-content: center;
+  }
+
+  .homeslider {
+    overflow-x: hidden !important;
+  }
+}

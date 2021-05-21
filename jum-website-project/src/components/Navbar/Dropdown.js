@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
-import "./dropdown.scss";
 
 const Dropdown = ({ CloseMobileMenu }) => {
   const [click, setClick] = useState(false);

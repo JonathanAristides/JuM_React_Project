@@ -4,8 +4,9 @@
   --mainColor: rgb(0, 91, 154);
   --selectColor: rgb(14, 109, 177);
   --dropdown2Color: rgb(20, 125, 201);
-  --shadowColor: lightgrey;
+  --shadowColor: rgb(175, 175, 175);
   --greyishColor: #bababa;
+  --darkGreyColor: #7a7a7a;
 }
 
 * {
@@ -26,6 +27,7 @@ body {
   min-width: 300px;
   max-width: 1300px;
   margin: 0 auto;
+  overflow-x: hidden !important;
 
   display: grid;
   grid-template-columns: 1fr;

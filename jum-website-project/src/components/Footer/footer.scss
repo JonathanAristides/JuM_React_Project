@@ -62,12 +62,11 @@
     place-content: center;
     text-align: center;
     line-height: 1.5rem;
-  }
-
-  div {
-    display: grid;
-    grid-auto-flow: rows;
-    place-content: center;
+    div {
+      display: grid;
+      grid-auto-flow: rows;
+      place-content: center;
+    }
   }
 
   .social {
