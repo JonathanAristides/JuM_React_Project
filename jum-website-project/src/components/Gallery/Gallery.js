@@ -1,7 +1,7 @@
 import React from "react";
 import useWindowDimensions from "../WindowDimensions/getWindowDimensions";
-import image1 from "../../assets/images/image1.jpg";
 import "./galleryStyle.scss";
+import { Services } from "../Data/Services.json";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
@@ -21,20 +21,26 @@ const Gallery = () => {
         focus: "center",
       }}
     >
-      <SplideSlide className="soos">
-        <Link className="cardLink" to="#">
-          <div className="slideCardContainer">
-            <div className="servicesCard">
-              {" "}
-              <img className="galleryImageTop" src={image1} alt="" />
-              <div className="galleryCardTitle">Baumeister</div>
-              <div className="galleryCardText">
-                Wir koordinieren alle am Bau mitwirkenden Unternehmen
+      {Services.map((item) => {
+        return (
+          <SplideSlide className="sliderCardContainer" key={item.id}>
+            <Link className="cardLink" to={`/Services/${item.title}`}>
+              <div className="slideCardContainer">
+                <div className="servicesCard">
+                  {" "}
+                  <img
+                    className="galleryImageTop"
+                    src={`${item.image}`}
+                    alt="..."
+                  />
+                  <div className="galleryCardTitle">{item.title}</div>
+                  <div className="galleryCardText">{item.shortDescription}</div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Link>
-      </SplideSlide>
+            </Link>
+          </SplideSlide>
+        );
+      })}
     </Splide>
   ) : (
     <div>Swag</div>

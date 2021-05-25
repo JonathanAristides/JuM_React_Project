@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MenuItems } from "./MenuItems";
+import { Services } from "../Data/Services.json";
 import { Link } from "react-router-dom";
 
 const Dropdown = ({ CloseMobileMenu }) => {
@@ -11,12 +11,12 @@ const Dropdown = ({ CloseMobileMenu }) => {
       onClick={CloseMobileMenu}
       className={click ? "dropdown-menu clicked" : "dropdown-menu"}
     >
-      {MenuItems.map((item, index) => {
+      {Services.map((item, index) => {
         return (
           <li key={index}>
             <Link
               className={item.className}
-              to={item.path}
+              to={`/Services/${item.title}`}
               onClick={() => {
                 setClick(false);
               }}
