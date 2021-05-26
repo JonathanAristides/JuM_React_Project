@@ -5,6 +5,7 @@ const Button = () => {
   return (
     <button className="contactButton">
       <svg
+        className="buttonSvg"
         width="47"
         height="34"
         viewBox="0 0 47 34"
@@ -16,6 +17,7 @@ const Button = () => {
           fill="white"
         />
       </svg>
+      <p className="contactText">Kontakt</p>
     </button>
   );
 };
