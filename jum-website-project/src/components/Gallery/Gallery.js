@@ -9,14 +9,14 @@ import { Link } from "react-router-dom";
 
 const Gallery = () => {
   // console.log(useWindowDimensions());
-  return useWindowDimensions().width < 960 ? (
+
+  return (
     <Splide
       options={{
         type: "loop",
         rewind: true,
         waitForTransition: false,
         perPage: 1,
-        gap: "0rem",
         perMove: 1,
         focus: "center",
       }}
@@ -42,8 +42,6 @@ const Gallery = () => {
         );
       })}
     </Splide>
-  ) : (
-    <div>Swag</div>
   );
 };
 
