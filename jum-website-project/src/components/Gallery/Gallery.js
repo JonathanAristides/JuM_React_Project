@@ -1,5 +1,4 @@
 import React from "react";
-import useWindowDimensions from "../WindowDimensions/getWindowDimensions";
 import "./galleryStyle.scss";
 import { Services } from "../Data/Services.json";
 
