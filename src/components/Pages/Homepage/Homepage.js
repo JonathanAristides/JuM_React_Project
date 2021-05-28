@@ -14,7 +14,7 @@ const Homepage = () => {
           <br />
           <span className="homeUnderline">Zuverlässigkeit</span>
         </p>
-        <div className="button">
+        <div className="homebutton">
           <Button />
         </div>
       </div>

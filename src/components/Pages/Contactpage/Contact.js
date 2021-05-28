@@ -1,5 +1,6 @@
 import React from "react";
 import ContactSvg from "../../../assets/svg/ContactSvg";
+import ContactSvg2 from "../../../assets/svg/ContactSvg2";
 import "./contactStyle.scss";
 
 const Contact = () => {
@@ -14,11 +15,15 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="contactpageSvg">
+      <div className="contactSvg">
         <ContactSvg />
       </div>
 
       <div className="contactFormContainer">
+        <div className="contactSvg2Container">
+          <ContactSvg2 />
+        </div>
+
         <div className="contactForm">
           <div className="contactFormText">
             Stellen Sie uns noch heute eine unverbindliche Anfrage unter:

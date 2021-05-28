@@ -47,10 +47,10 @@
     left: 0;
     width: 100%;
     bottom: -2.5rem;
-    z-index: -1;
+    z-index: 10;
   }
 
-  .button {
+  .homebutton {
     display: grid;
     place-content: center;
   }
@@ -58,10 +58,15 @@
   .homepageSvg {
     place-self: center;
     display: grid;
-    align-content: center;
+    place-content: center;
     width: 90%;
     min-width: 400px;
     padding: 1rem;
+    height: 400px;
+    svg {
+      height: 450px;
+      width: 450px;
+    }
   }
 
   .homeslider {
@@ -119,10 +124,10 @@
     left: 0;
     width: 100%;
     bottom: -1.6rem;
-    z-index: -1;
+    z-index: 10;
   }
 
-  .button {
+  .homebutton {
     display: grid;
     place-content: center;
     padding: 1rem;

@@ -17,7 +17,7 @@ const Button = () => {
           fill="white"
         />
       </svg>
-      <p className="contactText">Kontakt</p>
+      <p className="contactbuttonText">Kontakt</p>
     </button>
   );
 };

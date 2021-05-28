@@ -18,14 +18,14 @@
 }
 
 body {
-  background: url("./assets/triangle-mosaic.png");
-  background-size: 150px 150px;
 }
 
 .container {
+  background: url("./assets/triangle-mosaic.png");
+  background-size: 150px 150px;
   width: 90%;
   min-width: 300px;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow-x: hidden !important;
 

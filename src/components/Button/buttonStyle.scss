@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     place-content: center;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 30px;
     border: none;
     cursor: pointer;
@@ -25,12 +25,14 @@
 
     .buttonSvg {
       margin: 0 auto;
+      place-self: center;
     }
 
-    .contactText {
+    .contactbuttonText {
       color: white;
       font-weight: bold;
       font-size: 1.3rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -58,7 +60,7 @@
       transform: scale(0.98);
     }
 
-    .contactText {
+    .contactbuttonText {
       display: none;
     }
   }
