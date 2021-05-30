@@ -49,6 +49,10 @@
     width: 100%;
     bottom: -2.5rem;
     z-index: 10;
+    //Firefox specific styling
+    @-moz-document url-prefix() {
+      bottom: -1.5rem;
+    }
   }
   .contactbutton {
     display: grid;
@@ -195,6 +199,10 @@
     width: 100%;
     bottom: -1.8rem;
     z-index: 10;
+    //Firefox specific styling
+    @-moz-document url-prefix() {
+      bottom: -1rem;
+    }
   }
 
   .contactForm {

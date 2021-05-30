@@ -35,6 +35,9 @@
       padding: 0.5rem 1rem;
     }
   }
+  .buttonLink {
+    text-decoration: none;
+  }
 }
 
 //Mobile Styles
@@ -63,5 +66,8 @@
     .contactbuttonText {
       display: none;
     }
+  }
+  .buttonLink {
+    text-decoration: none;
   }
 }

@@ -17,7 +17,6 @@ const Gallery = () => {
         waitForTransition: false,
         perPage: 1,
         perMove: 1,
-        focus: "center",
       }}
     >
       {Services.map((item) => {
