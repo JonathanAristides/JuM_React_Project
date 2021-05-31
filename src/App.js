@@ -4,7 +4,7 @@ import "./App.scss";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Pages/Homepage/Homepage";
 import Contact from "./components/Pages/Contactpage/Contact";
-import Services from "./components/Pages/Servicespages/Services";
+import ServicesPage from "./components/Pages/Servicespages/ServicesPage";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Route path="/ueberuns"></Route>
 
             <Route path="/Services/:title">
-              <Services />
+              <ServicesPage />
             </Route>
           </Switch>
         </main>
