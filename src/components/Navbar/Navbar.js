@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/JUMLogo-png.png";
 import "./navbar.scss";
 import Dropdown from "./Dropdown";
+import useWindowDimensions from "../WindowDimensions/getWindowDimensions";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -10,41 +11,56 @@ const Navbar = () => {
 
   //active link detection (not nice but it works)
   let location = useLocation();
+  let currentWidth = useWindowDimensions().width;
+
   useEffect(() => {
     let activeSite = location.pathname.toLowerCase();
-    if (activeSite.includes("services")) {
-      document.getElementById("dienste").style.color = "var(--mainColor)";
-      document.getElementById("dienste").style.fontWeight = "600";
+    const services = document.getElementById("dienste");
+    const contact = document.getElementById("kontakt");
+    const about = document.getElementById("ueberuns");
+    if (currentWidth < 960) {
+      contact.style.color = "white";
+      contact.style.fontWeight = "400";
 
-      document.getElementById("kontakt").style.color = "black";
-      document.getElementById("kontakt").style.fontWeight = "400";
-      document.getElementById("ueberuns").style.color = "black";
-      document.getElementById("ueberuns").style.fontWeight = "400";
-    } else if (activeSite.includes("kontakt")) {
-      document.getElementById("kontakt").style.color = "var(--mainColor)";
-      document.getElementById("kontakt").style.fontWeight = "600";
-
-      document.getElementById("dienste").style.color = "black";
-      document.getElementById("dienste").style.fontWeight = "400";
-      document.getElementById("ueberuns").style.color = "black";
-      document.getElementById("ueberuns").style.fontWeight = "400";
-    } else if (activeSite.includes("ueberuns")) {
-      document.getElementById("ueberuns").style.color = "var(--mainColor)";
-      document.getElementById("ueberuns").style.fontWeight = "600";
-
-      document.getElementById("dienste").style.color = "black";
-      document.getElementById("dienste").style.fontWeight = "400";
-      document.getElementById("kontakt").style.color = "black";
-      document.getElementById("kontakt").style.fontWeight = "400";
+      services.style.color = "white";
+      services.style.fontWeight = "400";
+      about.style.color = "white";
+      about.style.fontWeight = "400";
     } else {
-      document.getElementById("ueberuns").style.color = "black";
-      document.getElementById("ueberuns").style.fontWeight = "400";
-      document.getElementById("dienste").style.color = "black";
-      document.getElementById("dienste").style.fontWeight = "400";
-      document.getElementById("kontakt").style.color = "black";
-      document.getElementById("kontakt").style.fontWeight = "400";
+      if (activeSite.includes("services")) {
+        services.style.color = "var(--mainColor)";
+        services.style.fontWeight = "600";
+
+        contact.style.color = "black";
+        contact.style.fontWeight = "400";
+        about.style.color = "black";
+        about.style.fontWeight = "400";
+      } else if (activeSite.includes("kontakt")) {
+        contact.style.color = "var(--mainColor)";
+        contact.style.fontWeight = "600";
+
+        services.style.color = "black";
+        services.style.fontWeight = "400";
+        about.style.color = "black";
+        about.style.fontWeight = "400";
+      } else if (activeSite.includes("ueberuns")) {
+        about.style.color = "var(--mainColor)";
+        about.style.fontWeight = "600";
+
+        services.style.color = "black";
+        services.style.fontWeight = "400";
+        contact.style.color = "black";
+        contact.style.fontWeight = "400";
+      } else {
+        about.style.color = "black";
+        about.style.fontWeight = "400";
+        services.style.color = "black";
+        services.style.fontWeight = "400";
+        contact.style.color = "black";
+        contact.style.fontWeight = "400";
+      }
     }
-  }, [location]);
+  }, [location, currentWidth]);
 
   const handleClick = () => {
     setClick(!click);
