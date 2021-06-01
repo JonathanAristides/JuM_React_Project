@@ -1,0 +1,115 @@
+//Desktop Style
+@media screen and (min-width: 960px) {
+  .aboutContainer {
+    display: grid;
+    place-content: center;
+    row-gap: 15rem;
+    padding: 2rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(100px, auto));
+  }
+
+  .aboutText {
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+  }
+
+  .aboutFirmName {
+    color: var(--darkGreyColor);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+  .aboutSlogan {
+    font-size: 2.5em;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+    display: grid;
+    place-content: center;
+  }
+
+  .aboutUnderline {
+    position: relative;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .aboutUnderline::after {
+    content: url("../../../assets/svg/underlines/aboutDesktop.svg");
+    position: absolute;
+    display: grid;
+    place-content: center;
+    left: 0;
+    width: 100%;
+    bottom: -2.5rem;
+    transform: rotate(3deg);
+    z-index: 10;
+
+    //Firefox specific styling
+    @-moz-document url-prefix() {
+      bottom: -2.5rem;
+    }
+  }
+}
+
+//Mobile Style
+@media screen and (max-width: 960px) {
+  .aboutContainer {
+    display: grid;
+    place-content: center;
+    padding: 2rem 0;
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto);
+    width: 80%;
+    margin: 0 auto;
+    max-width: 500px;
+    row-gap: 4rem;
+  }
+
+  .aboutFirmName {
+    color: var(--darkGreyColor);
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  .aboutSlogan {
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .aboutUnderline {
+    position: relative;
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .aboutUnderline::after {
+    content: url("../../../assets/svg/underlines/aboutMobile.svg");
+    position: absolute;
+    display: grid;
+    place-content: center;
+    left: 0;
+    width: 100%;
+    bottom: -2.3rem;
+    transform: rotate(5deg);
+    z-index: 10;
+    //Firefox specific styling
+    @-moz-document url-prefix() {
+      bottom: -1rem;
+    }
+  }
+
+  .aboutSvg {
+    display: none;
+  }
+}
